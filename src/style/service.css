@@ -1,0 +1,158 @@
+.service .call_button {
+    background-color: #65E700;
+    padding: 17px 32px;
+    font-weight: 500;
+}
+
+.service_text {
+    color: #00CBFF;
+    font-size: 32px;
+    text-align: center;
+    max-width: 502px !important;
+    margin: 0 auto !important;
+}
+
+.service_text span {
+    font-weight: 600;
+}
+
+.service-call {
+    background-color: #FAF9FE;
+    padding: 46px 35px 37px 56px;
+    border-radius: 50px;
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.service-wrap {
+    background-image: url('../img/bg-service.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 30px;
+}
+
+h2 {
+    transform: rotate(-90deg);
+    color: rgba(0, 0, 0, 0.04) !important;
+    font-size: 40px !important;
+}
+
+.service_work_flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 40px;
+    /* flex-wrap: wrap; */
+}
+
+.service-work {
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 4px #01CBE6;
+    padding: 11px 13px;
+    transition: 1s;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-work .img {
+    max-width: 100%;
+}
+
+.text {
+    color: #51D9EC;
+    margin-bottom: 0 !important;
+    width: 111px;
+    font-size: 12px !important;
+}
+
+.block-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-work:hover {
+    box-shadow: 0px 0px 22px #A8D966;
+    transform: scale(1.1);
+    transition: 1s;
+    height: auto;
+}
+
+.sub {
+    display: none;
+    font-size: 12px !important;
+}
+
+.service-work:hover .text {
+    color: #A8D966;
+}
+
+.service-work:hover .sub {
+    display: block;
+}
+
+
+@media (max-width:760px) {
+    .service-wrap {
+        padding: 0;
+    }
+
+    .service-call {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    .service_work_flex {
+        display: flex;
+        gap: 7px;
+    }
+
+    .service-work {
+        max-width: 120px;
+    }
+
+}
+
+@media (max-width:540px) and (min-width:320px) {
+
+    h2 {
+        display: none;
+    }
+
+    .service_work_flex {
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+    }
+
+    .service-wrap {
+        padding: 0 !important;
+    }
+
+    .service-work {
+        max-width: 92px;
+        height: 123px;
+    }
+
+    .text {
+        font-size: 5px !important;
+    }
+
+    .service-work:hover {
+        height: auto;
+    }
+
+    .service-call {
+        margin-top: 0 !important;
+        padding: 20px 0 !important;
+        text-align: center;
+    }
+}

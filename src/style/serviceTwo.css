@@ -1,0 +1,184 @@
+.serviceTwo {
+    background-image: url('../img/bg-uslug.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.serviceTwo-wrap {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 110px;
+}
+
+.text-title-block {
+    background-color: #65E700;
+    border-radius: 100px;
+    max-width: 485px;
+    padding: 23px 35px;
+    margin-bottom: 24px;
+}
+
+.serviceTwo-right .call_button,
+.aboutUs .call_button {
+    background-color: #01CBFF;
+}
+
+.aboutUs .button_center {
+    text-align-last: left;
+}
+
+h3 {
+    color: white !important;
+    font-size: 35px !important;
+}
+
+.call_button {
+    padding: 12px 24px;
+    background-color: #65E700;
+}
+
+.serviceTwo .button_center {
+    text-align: right;
+    margin-top: 129px;
+}
+
+.text-about {
+    max-width: 550px;
+}
+
+.aboutUs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-title {
+    color: #01CBFF;
+    font-weight: bold;
+    font-size: 40px;
+    width: 293px;
+}
+
+.work-team {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    padding-bottom: 150px;
+    flex-wrap: wrap;
+}
+
+.info-team {
+    background-color: #01CBFF;
+    text-align: center;
+    color: white;
+    max-width: 75%;
+    border-radius: 50px;
+    padding: 12px 30px;
+    line-height: normal;
+}
+
+.fast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-team:last-child {
+    margin: 0;
+}
+
+.title-team {
+    font-size: 24px;
+}
+
+p {
+    margin: 0 !important;
+}
+
+hr {
+    margin: 0 !important;
+}
+
+.block {
+    display: none;
+}
+
+.serviceTwo-left img {
+    max-width: 540px;
+}
+
+@media (max-width:760px) and (min-width:320px) {
+    .block {
+        display: block;
+    }
+
+    .call_button {
+        font-size: 26px !important;
+    }
+
+    .closee {
+        display: none;
+    }
+
+    .serviceTwo-wrap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-sub {
+        text-align: center;
+    }
+
+    .about-left .about-title {
+        text-align: center !important;
+        margin-right: 0 !important;
+    }
+
+    p {
+        margin-right: 0 !important;
+    }
+
+    .aboutUs .about-left .text-about {
+        max-width: 100%;
+    }
+
+    .serviceTwo-right .button_center {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+
+    .aboutUs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-title-block {
+        font-size: 35px !important;
+        text-align: center;
+    }
+
+    .serviceTwo-left img,
+    .about-right img {
+        max-width: 100%;
+    }
+
+    .about-title {
+        text-align: center !important;
+        margin: 0 0 !important;
+        width: 100%;
+    }
+
+    .about-left .button_center {
+        margin-top: 20px !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .work-team {
+        display: flex;
+        justify-content: center;
+    }
+
+}
