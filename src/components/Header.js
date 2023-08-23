@@ -81,7 +81,7 @@ const Header = () => {
                             <div className='language-btn'>
 
                                 <div className='active' onClick={isopen}>
-                                    <button className="btn" onClick={flagsLang}>{flags ? <img src={Rus} alt='Uzb' /> : <img src={Uzb} alt='Rus' />}</button>
+                                    <button className="btn" onClick={flagsLang}>{flags ? <img src={Rus} alt='Rus' /> : <img src={Uzb} alt='Uzb' />}</button>
 
 
                                     <div className={open ? "shows" : "closes"}>

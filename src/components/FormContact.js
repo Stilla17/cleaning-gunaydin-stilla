@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import GirlContact from '../img/contact-girl.png'
 import UzbFlag from '../img/twemoji_flag-uzbekistan.svg'
 import { getText } from './Locales';
-import { GoogleSpreadsheet } from 'google-spreadsheet';
-import axios from 'axios';
 
 const FormContact = () => {
 
@@ -35,9 +33,7 @@ const FormContact = () => {
                 await res.json();
                 setData({ ...data, firstName: "", lastName: "", tel: "" })
                 window.location.reload()
-            } else {
-                alert("Пожалуйста заполняйте")
-            }
+            } 
 
         } catch (err) {
             console.log(err + "sadasdasdasdasd");
