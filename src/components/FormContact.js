@@ -13,6 +13,8 @@ const FormContact = () => {
 
     const { firstName, lastName, tel } = data
 
+    const [alert, setAlert] = useState(false)
+
 
     const handleChange = (e) => {
         setData({ ...data, [e.target.name]: e.target.value })
@@ -31,10 +33,12 @@ const FormContact = () => {
                     body: JSON.stringify([[firstName, lastName, tel, Date().toLocaleString()],]),
                 });
                 await res.json();
-                setData({ ...data, firstName: "", lastName: "", tel: "" })
+                setData({ firstName: "", lastName: "", tel: "" })
                 window.location.reload()
-            } 
-
+            } else {
+                // setAlert(!alert)
+                alert("Запольните все полья")
+            }
         } catch (err) {
             console.log(err + "sadasdasdasdasd");
         }
@@ -51,14 +55,15 @@ const FormContact = () => {
                 <div className='contact'>
                     <div className='contact-left'>
                         <div>
-                            <form className='form' onSubmit={handleSubmit}>
+                            <form className='form' onSubmit={handleSubmit} required={true}>
                                 <label htmlFor='firstName'>{getText('firstName')}*
                                     <input type='text'
                                         name='firstName'
                                         value={firstName}
                                         placeholder={getText('firstName')}
                                         onChange={handleChange}
-                                        className='input form-control' required />
+                                        className='input form-control' required={true} />
+
                                 </label>
                                 <label htmlFor='lastName'>{getText('lastName')}*
                                     <input type='text'
@@ -66,7 +71,7 @@ const FormContact = () => {
                                         value={lastName}
                                         onChange={handleChange}
                                         placeholder={getText('lastName')}
-                                        className='input form-control' required />
+                                        className='input form-control' required={true} />
                                 </label>
                                 <label htmlFor='tel' className='label'>{getText('tel')}*
                                     <input type='text'
@@ -74,7 +79,7 @@ const FormContact = () => {
                                         value={tel}
                                         onChange={handleChange}
                                         placeholder='(90) 177 - 77 - 77'
-                                        className='input form-control' required />
+                                        className='inputs form-control' required={true} />
                                     <img src={UzbFlag} alt='UzbFlag' className='imgFlag' />
                                 </label>
                                 <div className='button_center'>

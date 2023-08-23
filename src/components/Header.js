@@ -20,10 +20,6 @@ const Header = () => {
         setOpen(!open);
     }
 
-    const flagsLang = () => {
-        setFlags(!flags)
-    }
-
     const scrollToSection = () => {
         const call = document.getElementById('call');
         if (call) {
@@ -31,13 +27,13 @@ const Header = () => {
         }
     };
 
-
     const handleLanguageChange = (language) => {
         if (language === 'uz' || language === 'ru') {
             setLanguage(language);
             localStorage.setItem('language', language);
             window.location.reload();
         }
+        setFlags(!flags)
     }
 
     return (
@@ -81,12 +77,15 @@ const Header = () => {
                             <div className='language-btn'>
 
                                 <div className='active' onClick={isopen}>
-                                    <button className="btn" onClick={flagsLang}>{flags ? <img src={Rus} alt='Rus' /> : <img src={Uzb} alt='Uzb' />}</button>
-
+                                    <button className="btn" >
+                                        {!flags ? <img src={Rus} alt='Rus' /> : <img src={Uzb} alt='Uzb' />}
+                                    </button>
 
                                     <div className={open ? "shows" : "closes"}>
-                                        <button className='btn' onClick={() => handleLanguageChange('ru')}><img src={Rus} alt='Rus' /></button>
-                                        <button className='btn' onClick={() => handleLanguageChange('uz')}><img src={Uzb} alt='Uzb' /></button>
+                                        {
+                                            flags ? <button className='btn' onClick={() => handleLanguageChange('ru')}><img src={Rus} alt='Rus' /></button> :
+                                                <button className='btn' onClick={() => handleLanguageChange('uz')}><img src={Uzb} alt='Uzb' /></button>
+                                        }
                                     </div>
                                 </div>
                             </div>

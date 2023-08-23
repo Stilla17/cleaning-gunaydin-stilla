@@ -15,19 +15,22 @@
     display: flex;
     flex-direction: column;
     background: rgba(147, 206, 255, 0.78);
-    padding: 34px 30px;
+    padding: 34px 60px;
     border-radius: 20px;
 }
 
 .input {
     border: none !important;
     margin-bottom: 36px;
-    padding: 26px 41px !important;
+    padding: 26px 21px 26px 20px !important;
     border-radius: 20px !important;
 }
 
-.input:last-of-type {
-    padding-left: 66px !important;
+.inputs{
+    border: none !important;
+    margin-bottom: 36px;
+    padding: 26px 21px 26px 60px !important;
+    border-radius: 20px !important;
 }
 
 .label {
@@ -54,20 +57,25 @@
     margin-top: 27px !important;
 }
 
+.red {
+    color: red;
+}
+
+
 @media (max-width: 760px) {
     .contact-right {
         display: none;
     }
 
-    .form-contact{
+    .form-contact {
         margin-bottom: 30px;
     }
 
-    .form{
+    .form {
         padding: 34px 20px;
     }
 
-    .formContact{
+    .formContact {
         padding-bottom: 50px;
     }
 
