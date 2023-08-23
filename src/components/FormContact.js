@@ -21,7 +21,7 @@ const FormContact = () => {
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         try {
             if (firstName.length > 0 && lastName.length > 0 && tel.length > 0) {
@@ -33,7 +33,7 @@ const FormContact = () => {
                     body: JSON.stringify([[firstName, lastName, tel, Date().toLocaleString()],]),
                 });
                 await res.json();
-                setData({ firstName: "", lastName: "", tel: "" })
+                setData({...data, firstName: "", lastName: "", tel: "" })
                 window.location.reload()
             } else {
                 // setAlert(!alert)
@@ -55,9 +55,10 @@ const FormContact = () => {
                 <div className='contact'>
                     <div className='contact-left'>
                         <div>
-                            <form className='form' onSubmit={handleSubmit} required={true}>
+                            <form className='form' onSubmit={handleSubmit}>
                                 <label htmlFor='firstName'>{getText('firstName')}*
-                                    <input type='text'
+                                    <input 
+                                        type='text'
                                         name='firstName'
                                         value={firstName}
                                         placeholder={getText('firstName')}
@@ -66,7 +67,8 @@ const FormContact = () => {
 
                                 </label>
                                 <label htmlFor='lastName'>{getText('lastName')}*
-                                    <input type='text'
+                                    <input 
+                                        type='text'
                                         name='lastName'
                                         value={lastName}
                                         onChange={handleChange}
@@ -74,7 +76,8 @@ const FormContact = () => {
                                         className='input form-control' required={true} />
                                 </label>
                                 <label htmlFor='tel' className='label'>{getText('tel')}*
-                                    <input type='text'
+                                    <input 
+                                        type='text'
                                         name='tel'
                                         value={tel}
                                         onChange={handleChange}
